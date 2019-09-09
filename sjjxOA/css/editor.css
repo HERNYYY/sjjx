@@ -1,0 +1,79 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+html,
+body {
+	width: 100%;
+	height: 100%;
+	min-width: 768px;
+	font-size: 0.9em;
+	line-height: 1.5;
+	font-family: "微软雅黑",tahoma, arial, Hiragino Sans GB, \\5b8b\4f53, sans-serif;
+}
+.select{
+	font-size: 0.9em;
+}
+.edit {
+	line-height: 24px;
+}
+.goodsSku h6{
+	padding-left: 15px;
+	border-left: 3px solid  #5a98de;
+}
+.proSpan>div{
+	float: left;
+	border: 1px solid #eee;
+	padding: 5px;
+	margin-right: 8px;
+	margin-top: 5px;
+}
+#editSpec .input-text{
+	border:0;
+}
+#editSpec .input-text:focus{
+	border:solid 1px #5a98de;
+}
+.GoodsImg>div{
+	width: 18%;
+	margin-right: 1.5625rem;
+	margin-bottom: 10px;
+	float: left;
+}
+.GoodsImg>div>div{
+	width: 100%;
+	height: 220px;
+	border-radius: 5px;
+	overflow: hidden;
+}
+.GoodsImg>div>div img{
+	width: 100%;
+	height: 100%;
+	border: 1px solid #DDDDDD;
+}
+.GoodsImg>div>div img:hover{
+	transform: scale(1.5);
+}
+.GoodsImg .upload{
+	 width:65px;
+	 overflow: hidden;
+}
+.GoodsImg h6{
+	height: 25px;
+	line-height: 25px;
+	padding-left: 10px;
+	border-left: 3px solid #5a98de;
+}
+.clear{
+	clear: both;
+}
+.proSpan{
+	white-space:normal;
+	line-height: 1.5em;
+	word-break:break-all;
+}
+#imgUpdate img{
+	cursor: -moz-zoom-in;
+	cursor: -webkit-zoom-in;
+}
+

@@ -1,0 +1,54 @@
+body{
+    background: url(../img/introduction//ins1.jpg) no-repeat;
+}
+
+.main-page{
+	position: absolute;
+	width: 1070px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 500px
+}
+
+.main-page>div{
+    position: absolute;
+	width:100%;
+	top: 50%;
+	left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.row>div{
+    margin-bottom: 20px !important;
+}
+
+.main-page>div img {
+	width: 100%;
+	border-radius: 5px；
+}
+
+.main-page>div>div:nth-child(1) img{
+	box-shadow: 0 0 10px #88278E;
+}
+.main-page>div>div:nth-child(2) img{
+	box-shadow: 0 0 10px #D24726;
+}
+.main-page>div>div:nth-child(3) img{
+	box-shadow: 0 0 10px #00A0B0;
+}
+.main-page>div>div:nth-child(4) img{
+	box-shadow: 0 0 10px #4D3C98;
+}
+.main-page>div>div:nth-child(5) img{
+	box-shadow: 0 0 10px #25AC74;
+}
+.main-page>div>div:nth-child(6) img{
+	box-shadow: 0 0 10px #B92478;
+}
+.main-page>div>div:nth-child(7) img{
+	box-shadow: 0 0 10px #0076BC;
+}
+.main-page>div>div:nth-child(8) img{
+	box-shadow: 0 0 10px #DDA200;
+}

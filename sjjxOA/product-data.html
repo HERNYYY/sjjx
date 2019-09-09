@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="shortcut icon" href="./assets/bitbug_favicon.ico">
+    <link rel="stylesheet" href="./bin/h-ui/css/H-ui.min.css">
+    <link rel="stylesheet" href="./bin/h-ui.admin/css/H-ui.admin.css">
+    <link rel="stylesheet" href="./bin/Hui-iconfont/1.0.8/iconfont.min.css">
+    <link rel="stylesheet" href="./css/admin.css">
+    <link rel="stylesheet" href="./css/common.css">
+</head>
+<body>
+    <nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 查看上传 <span class="c-gray en">&gt;</span>
+        上传记录列表
+        <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);"
+         title="刷新"><i class="Hui-iconfont">&#xe68f;</i></a>
+    </nav>
+    <div class="page-container">
+            <h5 style="position: relative">搜索<span style="color:#f00;font-size: 10px;position: absolute;right: 5px">*注(本系统只保留最近30天的上传记录)</span></h5>
+        <div class="row cl">
+
+            <div class="col-md-6 mt-15 pl-25">
+                商品编号:
+                <input type="text" name="goodsId" id="goodsId" value="" class="input-text radius" style="width: 45%;" />
+
+            </div>
+
+            <div class="col-md-6 mt-15 pl-25">
+                反馈类型:
+                <select name="type" id="type" style="height: 31px;width: 45%;" class="select radius">
+                    <option value="">请选择</option>
+                    <option value="1">上架成功</option>
+                    <option value="2">上架失败</option>
+                    <option value="0">未处理</option>
+                </select>
+            </div>
+
+        </div>
+        <div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l">
+
+            </span>
+
+            <input type="button" class="btn btn-danger radius r" value="搜索" id="search">
+
+        </div>
+        <div class="mt-35 list" style="height: 40.625rem;">
+            <table class="table table-border table-bordered table-bg table-hover table-sort table-even radius">
+                <thead>
+                    <tr class="text-c">
+                        <th width="150">商品编号</th>
+                        <th width="250">上架提示</th>
+                        <th width="150">上架时间</th>
+                        <th width="80">上架状态</th>
+
+                    </tr>
+                </thead>
+                <tbody id="productLogs">
+                </tbody>
+            </table>
+        </div>
+        <!-- 分页 -->
+        <div class="mt-20">
+            <div class="row cl">
+                <div class="col-xs-4">
+                    <span id="footer"></span>显示&nbsp;<input type="number" name="pageSize" id="pageSize" value="10" class="input-text"
+                     style="width: 55px;height: 28px;" step="10" min="10" max="100" />&nbsp;条
+                </div>
+                <div class="col-xs-8 r text-r" id="page">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./js/jquery.min.js"></script>
+<script src="./bin/layer/2.4/layer.js"></script>
+<script src="./bin/h-ui/js/H-ui.min.js"></script>
+<script src="./bin/h-ui.admin/js/H-ui.admin.js"></script>
+<script src="./bin/laypage/1.2/laypage.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/product-data.js"></script>
+</html>

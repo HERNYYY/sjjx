@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>武汉草根学院工单系统</title>
+    <link rel="shortcut icon" href="./assets/bitbug_favicon.ico">
+    <link rel="stylesheet" href="./bin/h-ui/css/H-ui.min.css">
+    <link rel="stylesheet" href="./bin/Hui-iconfont/1.0.8/iconfont.min.css">
+    <link rel="stylesheet" href="./css/admin.css">
+    <link rel="stylesheet" href="./css/common.css">
+</head>
+<body>
+    <nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 工单系统 <span class="c-gray en">&gt;</span>提交工单
+        <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);"
+            title="刷新"><i class="Hui-iconfont">&#xe68f;</i></a>
+    </nav>
+
+    <div class="page-container">
+        <form action="#" method="post" class="form form-horizontal" id="pddPicker">
+
+            <!-- 商品编号 -->
+            <div class="row cl">
+                <label class="form-label col-xs-4 col-sm-3">
+                    <span class="c-red">*</span>商品编号：
+                </label>
+                <div class="form-label col-xs-4 col-sm-5">
+                    <input type="text" class="input-text radius" placeholder="" name="goodsId" id="goodsId" required="required">
+                </div>
+            </div>
+
+            <!-- 问题类型 -->
+            <div class="row cl">
+                <label class="form-label col-xs-4 col-sm-3">
+                    <span class="c-red">*</span>问题类型：
+                </label>
+                <div class="fromControls col-xs-4 col-sm-5">
+                    <select name="type" id="orderType" class="select radius">
+                        <option value="">请选择</option>
+                        <option value="1">详情图</option>
+                        <option value="2">轮播图</option>
+                        <option value="3">其他</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- 问题描述 -->
+            <div class="row cl">
+                <label class="form-label col-xs-4 col-sm-3">
+                    <span class="c-red">*</span>问题描述：
+                </label>
+                <div class="fromControls col-xs-4 col-sm-5">
+                    <textarea name="content" id="content" class="textarea radius" maxlength="1200"></textarea>
+                    <p class="textarea-numberbar">
+                        <em class="textarea-length" id="count">1200</em>
+                    </p>
+                </div>
+            </div>
+
+            <!-- 按钮组 -->
+            <div class="row cl">
+                <label class="form-label col-xs-4 col-sm-3"></label>
+                <div class="formControls col-xs-4 col-sm-5">
+                    <button id="OrderList" class="btn btn-primary radius" type="button">确认</button>
+                    <button onclick="window.parent.location.reload()" class="btn btn-danger radius" type="button">取消</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</body>
+<script src="./js/jquery.min.js"></script>
+<script src="./bin/layer/2.4/layer.js"></script>
+<script src="./bin/h-ui/js/H-ui.min.js"></script>
+<script src="./bin/h-ui.admin/js/H-ui.admin.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/product-order.js"></script>
+</html>

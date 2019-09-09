@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<link rel="shortcut icon" href="./assets/bitbug_favicon.ico">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./bin/h-ui/css/H-ui.min.css">
+    <link rel="stylesheet" href="./bin/Hui-iconfont/1.0.8/iconfont.min.css">
+    <link rel="stylesheet" href="./bin/city-picker.css">
+    <link rel="stylesheet" href="./css/admin.css">
+</head>
+<body>
+    <nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 商品管理 <span class="c-gray en">&gt;</span>商品列表
+        <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);"
+         title="刷新"><i class="Hui-iconfont">&#xe68f;</i></a>
+    </nav>
+
+    <div class="page-container">
+			<div class="row cl">
+				<h5>筛选</h5>
+				<form action="#" id="ProductScreening">
+
+					<div class="row cl mt-25">
+
+						<div class="col-md-1 col-xs-2 text-r">
+							商品分类 :
+						</div>
+						<div class="city-picker-selector col-xs-10 col-md-11" id="city-picker-search" style="float: left;">
+
+							<div class="selector-item storey province col-xs-12 col-md-4">
+								<a href="javascript:;" class="selector-name reveal df-color ">请选择</a>
+								<input type="hidden" name="userProvinceId" class="input-price val-error" value="" data-required="userProvinceId">
+								<div class="selector-list listing hide">
+									<div class="selector-search">
+										<input type="text" class="input-search" value="" placeholder="">
+									</div>
+									<ul>
+
+									</ul>
+								</div>
+							</div>
+							<div class="selector-item storey city col-xs-12 col-md-4">
+								<a href="javascript:;" class="selector-name reveal df-color forbid">请选择</a>
+								<input type="hidden" name="userCityId" class="input-price val-error" value="" data-required="userCityId">
+								<div class="selector-list listing hide">
+									<div class="selector-search">
+										<input type="text" class="input-search" value="" placeholder="">
+									</div>
+									<ul></ul>
+								</div>
+							</div>
+							<div class="selector-item storey district col-xs-12 col-md-4">
+								<a href="javascript:;" class="selector-name reveal df-color forbid">请选择</a>
+								<input type="hidden" id="userDistrictId" name="userDistrictId" class="input-price val-error" value="" data-required="userDistrictId">
+								<div class="selector-list listing hide">
+									<div class="selector-search">
+										<input type="text" class="input-search" value="" placeholder="">
+									</div>
+									<ul></ul>
+								</div>
+							</div>
+							<div class="selector-item storey street col-xs-12 col-md-4">
+								<a href="javascript:;" class="selector-name reveal df-color forbid">请选择</a>
+								<input type="hidden" id="userStreet" name="userStreet" class="input-price val-error" value="" data-required="userStreet">
+								<div class="selector-list listing hide">
+									<div class="selector-search">
+										<input type="text" class="input-search" value="" placeholder="">
+									</div>
+									<ul></ul>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="row cl mt-15">
+						<div class="col-md-1 col-xs-2 text-r">
+							商品编号 :
+
+						</div>
+						<div class="col-md-5 col-xs-10">
+							<input type="text" name="goodsId" id="goodsId" class="input-text radius" style="width:86%" />
+						</div>
+
+						<div class="col-md-1 col-xs-2  text-r">
+
+							关&nbsp;键&nbsp;字 :
+
+
+						</div>
+						<div class="col-md-5 col-xs-10">
+							<input type="text" name="tinyName" id="tinyName" class="input-text radius " style="width: 95%;" />
+						</div>
+					</div>
+					<div class="row cl mt-15">
+						<div class="col-md-1 col-xs-2 text-r">
+							佣金比例 :
+						</div>
+						<div class="col-md-2 col-xs-4">
+							<input type="text" name="beginCommission" id="beginCommission" value="" class="input-text radius " style="width:3.75rem;"
+							 placeholder="%" />
+							<span>-</span>
+							<input type="text" name="stopCommission" id="stopCommission" value="" class="input-text radius" style="width:3.75rem;"
+							 placeholder="%" />
+						</div>
+						<div class="col-md-1 col-xs-2 text-r">
+
+							劵&emsp;&nbsp;额 :
+
+						</div>
+						<div class="col-md-2 col-xs-4 ">
+							<input type="text" name="MincouponAmount" id="MincouponAmount" class="input-text radius " style="width:3.75rem;" />
+							<span>-</span>
+							<input type="text" name="MaxcouponAmount" id="MaxcouponAmount" class="input-text radius" style="width:3.75rem;" />
+						</div>
+						<div class="col-md-1 col-xs-2 text-r">
+							修改状态 :
+						</div>
+						<div class="col-md-3 col-xs-10">
+							<select class="select radius " style="height: 31px;width:40%;" name="status" id="status">
+								<option value="">请选择</option>
+								<option value="0">未修改</option>
+								<option value="10">用户修改</option>
+							</select>
+
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l">
+
+					<a href="javascript:;" class="btn btn-primary radius" id="updateProduct">修改商品</a>
+
+					<a href="javascript:;" id="product_details" class="btn btn-primary radius">查看详情</a>
+				</span>
+
+				<input type="button" class="btn btn-danger radius r" value="筛选" id="ScreeningProduct">
+
+			</div>
+			<div class="mt-20 list">
+
+				<table class="table table-border table-bordered table-bg table-hover table-sort table-even" id="productListTab">
+					<thead>
+						<tr class="text-c">
+							<th width="40"></th>
+							<th width="100">编码</th>
+							<th width="300">名称</th>
+							<th width="100">佣金比例(%)</th>
+							<th width="100">劵额</th>
+							<th width="100">分类</th>
+							<th width="100">修改状态</th>
+						</tr>
+					</thead>
+					<tbody id="productList">
+					</tbody>
+
+				</table>
+
+			</div>
+			<div class="mt-20">
+				<div class="row cl">
+					<div class="col-md-4 hidden-xs hidden-sm">
+						<span id="footer"></span>&nbsp;&nbsp;&nbsp;显示&nbsp;<input type="number" name="pageSize" id="pageSize" value="10" class="input-text"
+						 style="width: 55px;height: 28px;" step="10" min="10" max="100" />&nbsp;条
+					</div>
+					<div class="col-md-8 text-r col-xs-12" id="page">
+
+					</div>
+				</div>
+			</div>
+        </div>
+		
+		
+		<div id="loading-wrapper">
+			<div id="text">努力中 , 请稍等 </div>
+			<div class="inner"></div>
+		</div>
+        
+
+</body>
+<script src="./js/jquery.min.js"></script>
+<script src="./bin/layer/2.4/layer.js"></script>
+<script src="./bin/classify.js"></script>
+<script src="./bin/categories.js"></script>
+<script src="./bin/laypage/1.2/laypage.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/product-update.js"></script>
+</html>

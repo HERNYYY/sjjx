@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="shortcut icon" href="./assets/bitbug_favicon.ico">
+    <link rel="stylesheet" href="./bin/h-ui/css/H-ui.min.css">
+    <link rel="stylesheet" href="./bin/Hui-iconfont/1.0.8/iconfont.min.css">
+    <link rel="stylesheet" href="./bin/city-picker.css">
+    <link rel="stylesheet" href="./css/admin.css">
+</head>
+<body>
+    <div class="page-container product_details">
+
+        <ul id="Huifold1" class="Huifold">
+            <li class="item ">
+                <h4>基本信息<b>+</b></h4>
+                <div class="info row cl sjjxGoodsPdd"></div>
+            </li>
+            <li class="item">
+                <h4>商品规格<b>+</b></h4>
+                <div class="info row cl ">
+                    <div class="col-xs-12">
+                        <table class="table table-border table-bordered table-bg table-hover table-sort">
+                            <thead>
+                                <tr class="text-c">
+                                    <th width="100">商品图片</th>
+                                    <th width="100">商品sku名称</th>
+                                    <th width="100">单买价</th>
+                                    <th width="100">团购价</th>
+                                    <th width="100">商品库存</th>
+
+                                </tr>
+                            </thead>
+                            <tbody id="sjjxGoodsSku">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </li>
+            <li class="item">
+                <h4>商品图片<b>+</b></h4>
+                <div class=" info row cl  sjjxGoodsImgs">
+                </div>
+            </li>
+            <li class="item">
+                <h4>商品参数<b>+</b></h4>
+                <div class=" info row cl  sjjxPddGoodsProperty">
+                </div>
+            </li>
+
+        </ul>
+
+    </div>
+    <!--返回顶部-->
+    <div id="goToTop"><i class="Hui-iconfont">&#xe684;</i></div>
+    <!-- 缩略图 -->
+    <div id="scaleModel" onclick="closeModel(this)">
+        <div>
+            <div id="modelImg" class="radius"></div>
+
+        </div>
+    </div>
+    <!-- 进度动画 -->
+    <div id="loading-wrapper">
+        <div id="text">努力中 , 请稍等 </div>
+        <div class="inner"></div>
+    </div>
+</body>
+<script src="./js/jquery.min.js"></script>
+<script src="./bin/layer/2.4/layer.js"></script>
+<script src="./bin/h-ui/js/H-ui.min.js"></script>
+<script src="./bin/h-ui.admin/js/H-ui.admin.js"></script>
+<script src="./bin/jquery.lazyload.min.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/product-details.js"></script>
+</html>

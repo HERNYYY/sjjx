@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>武汉草根学院数据中心</title>
+    <link rel="shortcut icon" href="./assets/bitbug_favicon.ico">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./bin/h-ui/css/H-ui.min.css">
+    <link rel="stylesheet" href="./bin/Hui-iconfont/1.0.8/iconfont.min.css">
+    <link rel="stylesheet" href="./css/admin.css">
+    
+</head>
+<body>
+    <nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 数据中心 <span class="c-gray en">&gt;</span>个人数据
+        <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);"
+            title="刷新"><i class="Hui-iconfont">&#xe68f;</i></a>
+    </nav>
+
+    <div class="page-container">
+        
+        <div class="row cl">
+            
+            <div class="col-sm-6 col-xs-12 mt-15">
+                <h5 style="position: relative">数据筛选<span style="color:#f00;font-size: 10px;position: absolute;right: 5px">*注(本系统只保留最近30天的上传记录)</span></h5>
+                <form action="#" id="ChartScreening">
+                    <div class="row cl">
+                        <div class="col-sm-9 col-xs-12 mt-15">
+                        选择店铺：
+                        <select name="storeChoose" id="storeChoose" class="select radius">
+                        <option value="">全部店铺</option>
+                        </select>
+                        </div>
+
+                        <div class="col-sm-9 col-xs-12 mt-15">
+                        起始日期：
+                        <input type="date" class="date radius" id="beginTime">
+                        结束日期：
+                        <input type="date" class="date radius" id="endTime">
+                        </div>
+                        <div class="col-sm-3 col-xs-12 mt-15">
+                            <button class="btn btn-danger radius" type="button" id="ScreeningChart">筛选</button>
+                        </div>
+                    </div>
+                
+            </form>
+            </div>
+
+            <div class="col-sm-6 col-xs-12 mt-15">
+                <div id="pieCanv" style="width:600px;height:200px;"></div>
+            </div>
+            
+        
+        </div>
+
+        <div class="row cl">
+            
+            
+            <div class="col-sm-12 col-xs-12 mt-50">
+                <!-- 柱状图画布 -->
+                <div id="main" style="width: 1400px; height:500px"></div>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script src="./js/jquery.min.js"></script>
+<script src="./bin/layer/2.4/layer.js"></script>
+<script src="./bin/echarts.min.js"></script>
+<script src="./js/common.js"></script>
+<!-- <script src="./js/chart.js"></script> -->
+<script src="./js/chart2.js"></script>
+</html>

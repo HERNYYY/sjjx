@@ -1,0 +1,37 @@
+.msg-title i{
+    color : #FF5454;
+    font-size: 12px;
+}
+.msg-title {
+    color:#333333;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.msg-item{
+    color : #666666;
+    padding: 10px;
+    border-top: 1.5px solid #e8e8e8;
+    font-size: 11px;
+}
+.msg-item p {
+    padding-left: 17px;
+    padding-bottom: 2px;
+}
+.msgbtn{
+    margin-top:10px;
+}
+#ReadBtn{
+    display: none;
+}
+
+.msg-title2 {
+    color:#333333;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.msg-title2 i{
+    color:#3bb4f2 !important;
+    font-size: 12px;
+}
+

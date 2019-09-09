@@ -1,0 +1,124 @@
+body{
+    background: url(../img/login/loginBg.jpg);
+    background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+	width: 100%;
+	min-width: 768px;
+}
+
+
+#login {
+	font-size: 0.9em;
+	position: absolute;
+	width: 450px;
+	top: 50%;
+	right: 100px;
+	transform: translateY(-50%);
+	color:#fff;
+}
+
+#login .login-box {
+	position: relative;
+	padding: 15px;
+	/* height: 365px; */
+	background: rgba(0, 0, 0, .2);
+}
+
+
+#login form{
+    padding-top: 20px;
+	font-size: .7rem;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+#login form,.form-contorl{
+    box-shadow: 1px 1px 1px #95e0f7;
+    border: 1px solid #f5f5f5;
+}
+
+.input-group>.userbg,
+.input-group>.upwdbg,
+.input-group>.jhbg {
+	width: 2.5rem;
+	height: 100%;
+	line-height: 34px;
+	position: absolute;
+	z-index: 999999;
+	padding-left: 10px;
+}
+
+.input-group{
+    margin-bottom: 15px;
+}
+
+#login form input.box-shadow {
+    color:#fff;
+    box-shadow: 1px 1px 1px #95e0f7;
+    background: rabg(255,255,255,.1)
+}
+
+.input-group >input{
+	width:100%;
+    padding-left: 40px;
+    background: rgba(0, 0, 0, 0);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px !important;
+}
+
+#login .input-group {
+	width: 100%;
+	height: 34px;
+}
+
+.pwd-text{
+    font-size: 1.5em;
+    border: 0;
+    outline: 0;
+}
+
+.checkbox{
+	margin-left:20px;
+	margin-bottom: 33px !important;
+}
+
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:focus,
+.nav-tabs>li.active>a:hover {
+	background-color: #2559A4 !important;
+}
+
+.nav li>a:hover {
+	background-color: #2559A4 !important;
+}
+
+.nav-tabs>li.active>a:hover {
+	background-color: #2559A4 !important;
+}
+
+
+#login input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder,
+#login .btn {
+	color: #FFFFFF;
+}
+
+
+/* #postbtn{
+	width:150px;
+	height: 35px;
+	color: #fff;
+    background-color: #337ab7;
+	border-color: #2e6da4;
+	border-radius: 5px;
+} */
+
+
+

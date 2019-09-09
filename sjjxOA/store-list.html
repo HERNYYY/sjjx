@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<link rel="shortcut icon" href="./assets/bitbug_favicon.ico">
+	<link rel="stylesheet" href="./bin/h-ui/css/H-ui.min.css">
+	<link rel="stylesheet" href="./bin/h-ui.admin/css/H-ui.admin.css">
+	<link rel="stylesheet" href="./bin/h-ui.admin/css/style.css">
+	<link rel="stylesheet" href="./bin/h-ui.admin/skin/default/skin.css">
+	<link rel="stylesheet" href="./bin/Hui-iconfont/1.0.8/iconfont.min.css">
+	<link rel="stylesheet" href="./css/common.css">
+</head>
+<body>
+    <nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 店铺管理 <span class="c-gray en">&gt;</span>店铺管理列表
+        <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);"
+         title="刷新"><i class="Hui-iconfont">&#xe68f;</i></a>
+    </nav>
+    
+    <div class="Hui-article">
+		<article class="cl pd-20">
+			<div class="cl pd-5 bg-1 bk-gray mt-20">
+				<span class="l">
+					<a href="javascript:;" id="refresh" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe68f;</i> 刷新</a>
+					 <a class="btn btn-primary radius" id="storeAdd"><i class="Hui-iconfont">&#xe600;</i> 添加店铺</a>
+				</span> 
+				 <span class="r">共有数据：<strong id="total">0</strong> 条</span>
+			</div>
+			<div class="mt-20">
+				<table class="table table-border table-bordered table-bg table-hover table-sort">
+					<thead>
+						<tr class="text-c">
+							<th width="195">商品编码</th>
+							<th width="195">商品名称</th>
+							<th width="195">账号名称</th>
+							<th width="195">过期时间（单位：秒）</th>
+						</tr>
+					</thead>
+					<tbody id="shopBody">
+						
+					</tbody>
+				</table>
+			</div>
+		</article>
+	</div>
+</body>
+<script src="./js/jquery.min.js"></script>
+<script src="./bin/layer/2.4/layer.js"></script>
+<script src="./bin/h-ui/js/H-ui.min.js"></script>
+<script src="./bin/h-ui.admin/js/H-ui.admin.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/store-list.js"></script>
+
+</html>

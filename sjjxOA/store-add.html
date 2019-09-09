@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>武汉草根学院店铺添加</title>
+    <link rel="shortcut icon" href="./assets/bitbug_favicon.ico">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/admin.css">
+    <link rel="stylesheet" href="./bin/h-ui/css/H-ui.min.css">
+    <link rel="stylesheet" href="./bin/Hui-iconfont/1.0.8/iconfont.min.css">
+</head>
+<body>
+        <nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 商铺管理 <span class="c-gray en">&gt;</span>添加店铺
+        </nav>
+
+        <div class="page-container">
+            <form action="" method="POST" class="form form-horizontal">
+                <div class="row cl">
+                    <h5>店铺添加</h5>
+                    <label class="form-label col-xs-1" style="text-align: left;">授权码 :</label>
+					<div class="formControls col-xs-6 ">
+						<input type="text" class="input-text radius" placeholder="填入授权码" required="required" id="addCode">
+                    </div>
+                    <div class="formControls col-xs-5">
+                        <button class="btn btn-primary radius" id="codeBtn" type="button">确认</button>
+                    </div>
+                </div>
+                <div class="row cl">
+                    <h5>获取步骤</h5>
+                </div>
+
+                <div class="row cl">
+                    <div class="col-xs-6">
+                        <div><i class="Hui-iconfont" style="font-size: 1.3rem;color:#5a98de">&#xe720;</i>登录<span href="#" target="_blank" style="color:#5a98de;text-decoration: underline;cursor:pointer;" onclick="getCode()">(链接)</span></div>
+                        <div><img src="./img/manager/code2.png"></div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div><i class="Hui-iconfont" style="font-size: 1.3rem;color:#5a98de">&#xe720;</i><a href="" target="_blank"> 确认授权</a></div>
+                        <div><img src="./img/manager/code3.png"></div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div><i class="Hui-iconfont" style="font-size: 1.3rem;color:#5a98de">&#xe720;</i><a href="" target="_blank"> 获取code</a></div>
+                        <div><img src="./img/manager/code4.png"></div>
+                    </div>
+                </div>
+            </form>
+        </div>
+</body>
+<script src="./js/jquery.min.js"></script>
+<script src="./bin/layer/2.4/layer.js"></script>
+<script src="./bin/h-ui/js/H-ui.min.js"></script>
+<script src="./js/store-add.js"></script>
+<script src="./js/common.js"></script>
+</html>

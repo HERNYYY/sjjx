@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>武汉草根学院商品上架t</title>
+	<link rel="shortcut icon" href="./assets/bitbug_favicon.ico">
+    <link rel="stylesheet" href="./bin/h-ui/css/H-ui.min.css">
+    <link rel="stylesheet" href="./bin/h-ui.admin/css/H-ui.admin.css">
+    <link rel="stylesheet" href="./bin/Hui-iconfont/1.0.8/iconfont.min.css">
+    <link rel="stylesheet" href="./bin/h-ui.admin/css/style.css">
+    <link rel="stylesheet" href="./css/admin.css">
+</head>
+<body>
+    
+		<div class="page-container">
+
+			<form class="form form-horizontal" method="post" id="messagesSettings">
+				<div class="row cl">
+					<h5>选择商铺</h5>
+					<div class="col-xs-12">
+						<span class="c-red">*</span>
+						<select name="accessToken" id="storeSelect"  class="select radius" style="width: 18.75rem;height:31px;">
+						</select>
+					</div>
+				</div>
+				<!--运费-->
+				<div class="row cl">
+
+					<h5>运费</h5>
+					<div class="col-xs-12 col-md-4">
+
+						<div id="logistics"><span class="c-red">*</span>
+							<select name="costTemplateId" id="costTemplateId" class="select radius" style="width: 18.75rem;height:31px;">
+
+							</select><span id="costTemplateIdTips"></span>
+
+						</div>
+					</div>
+				</div>
+				<!--基本上架信息-->
+				<div class="row cl">
+					<h5>基本设置</h5>
+
+					<!--价格设置-->
+
+					<div class="col-xs-12 col-md-4">
+
+						<ul id="priceSettings">
+							<li><span class="c-red">*</span>团购价格=抓取价格
+								<select name="operator_g" id="operator_g">
+									<option value="1">-</option>
+									<option value="0">+</option>
+									<option value="2">*</option>
+									<option value="3">/</option>
+								</select>
+								<input type="text" name="groupPrice" id="groupPrice" value="2" class="setNum hui-input-clear" contenteditable="true"
+								 required="required" />
+							</li>
+							<li><span class="c-red">*</span>单买价格=团购价格
+								<select name="operator_s" id="operator_s">
+									<option value="0">+</option>
+									<option value="1">-</option>
+									<option value="2">*</option>
+									<option value="3">/</option>
+								</select>
+								<input type="text" name="singlePrice" id="singlePrice" value="1" class="setNum" contenteditable="true" required="required" />
+							</li>
+							<li id="priceTips"></li>
+
+						</ul>
+					</div>
+					<!--类型时间设置-->
+					<div class="col-xs-12 col-md-4">
+						<ul id="personSetting">
+
+							<li><span class="c-red">*</span>团购人数&nbsp;:&emsp;
+								<input type="text" class="setNum" value="2" contenteditable="true" required="required" name="groupPeople" id="groupPeople" />
+							</li>
+							<li><span class="c-red">*</span>发货时间&nbsp;:&emsp;
+								<input type="radio" name="shipment" value="86400" />&nbsp;24小时
+								<input type="radio" name="shipment" value="172800" checked="checked" />&nbsp;48小时
+							</li>
+						</ul>
+					</div>
+					<!--条件设置-->
+					<div class="col-xs-12 col-md-4">
+						<ul id="product_add">
+							<li>
+								<input type="checkbox" value="0" name="isJiaYiPeiShi" checked>
+								<label>假一赔十</label>
+							</li>
+							<li>
+								<input type="checkbox" value="0" name="isRefundable" checked>
+								<label>7天无理由退换货</label>
+							</li>
+							<li>
+								<input type="checkbox" name="isUsed" value="1">
+								<label>二手商品</label>
+							</li>
+							<li>
+								<input type="checkbox" name="isPresell" value="1">
+								<label>是否预售</label>
+							</li>
+							<li style="display: none;" id="isPresell">预售时间&nbsp;:&emsp;
+								<input type="date" name="presellTime" id="presellTime" value="" />
+							</li>
+
+						</ul>
+
+					</div>
+					<div class="row cl">
+						<div class="col-xs-12">
+							&emsp;注意&nbsp;:&emsp;团购价格 &lt;单买价&lt;市场价,带<span class="c-red">*</span>为必填字段
+
+						</div>
+					</div>
+				</div>
+				<div class="row cl">
+					<div class="col-xs-3 col-md-3 col-xs-offset-9 col-md-offset-9">
+						<input type="button" class="btn btn-primary radius" value="确认" id="ItemUpshelf">
+						<input class="btn btn-danger radius" value="重置" type="button" onclick="location.replace(location.href);">
+
+					</div>
+				</div>
+            </form>
+        </div>
+
+        <div id="loading-wrapper">
+			<div id="text">正在上架，请不要做其他操作！！！</div>
+			<div class="inner"></div>
+        </div>
+        
+        <div class="confirm">
+			<div id="confirmTxt">
+				<h6>上架提示</h6>
+				<p>商品已成功上架</p>
+			</div>
+			<a href="javascript:;" onclick="layer_close(this)" class="btn btn-danger radius" id="confirmBtn">确认</a>
+			
+		</div>
+</body>
+<script src="./js/jquery.min.js"></script>
+<script src="./bin/layer/2.4/layer.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/product-add.js"></script>
+</html>
